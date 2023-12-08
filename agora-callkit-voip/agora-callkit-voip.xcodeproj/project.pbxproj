@@ -9,17 +9,20 @@
 /* Begin PBXBuildFile section */
 		9134E93F2B2363460090BE3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9134E93E2B2363460090BE3B /* AppDelegate.swift */; };
 		9134E9412B2363460090BE3B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9134E9402B2363460090BE3B /* SceneDelegate.swift */; };
-		9134E9432B2363460090BE3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9134E9422B2363460090BE3B /* ViewController.swift */; };
+		9134E9432B2363460090BE3B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9134E9422B2363460090BE3B /* MainViewController.swift */; };
 		9134E9462B2363460090BE3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9134E9442B2363460090BE3B /* Main.storyboard */; };
 		9134E9482B2363470090BE3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9134E9472B2363470090BE3B /* Assets.xcassets */; };
 		9134E94B2B2363470090BE3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9134E9492B2363470090BE3B /* LaunchScreen.storyboard */; };
+		9134E9582B2367170090BE3B /* AgoraAppGroupDataHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 9134E9572B2367170090BE3B /* AgoraAppGroupDataHelper */; };
+		9134E95A2B2367170090BE3B /* AgoraBroadcastExtensionHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 9134E9592B2367170090BE3B /* AgoraBroadcastExtensionHelper */; };
+		9134E95C2B2367170090BE3B /* AgoraUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9134E95B2B2367170090BE3B /* AgoraUIKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9134E93B2B2363460090BE3B /* agora-callkit-voip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "agora-callkit-voip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9134E93E2B2363460090BE3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9134E9402B2363460090BE3B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9134E9422B2363460090BE3B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9134E9422B2363460090BE3B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9134E9452B2363460090BE3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9134E9472B2363470090BE3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9134E94A2B2363470090BE3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,6 +34,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9134E9582B2367170090BE3B /* AgoraAppGroupDataHelper in Frameworks */,
+				9134E95A2B2367170090BE3B /* AgoraBroadcastExtensionHelper in Frameworks */,
+				9134E95C2B2367170090BE3B /* AgoraUIKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +62,47 @@
 		9134E93D2B2363460090BE3B /* agora-callkit-voip */ = {
 			isa = PBXGroup;
 			children = (
-				9134E93E2B2363460090BE3B /* AppDelegate.swift */,
-				9134E9402B2363460090BE3B /* SceneDelegate.swift */,
-				9134E9422B2363460090BE3B /* ViewController.swift */,
-				9134E9442B2363460090BE3B /* Main.storyboard */,
+				9134E9552B2363CD0090BE3B /* UI */,
+				9134E9532B2363C50090BE3B /* Modules */,
+				9134E9542B2363C80090BE3B /* Managers */,
+				9134E9522B2363C30090BE3B /* App */,
 				9134E9472B2363470090BE3B /* Assets.xcassets */,
 				9134E9492B2363470090BE3B /* LaunchScreen.storyboard */,
 				9134E94C2B2363470090BE3B /* Info.plist */,
 			);
 			path = "agora-callkit-voip";
+			sourceTree = "<group>";
+		};
+		9134E9522B2363C30090BE3B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9134E93E2B2363460090BE3B /* AppDelegate.swift */,
+				9134E9402B2363460090BE3B /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9134E9532B2363C50090BE3B /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9134E9422B2363460090BE3B /* MainViewController.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		9134E9542B2363C80090BE3B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		9134E9552B2363CD0090BE3B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9134E9442B2363460090BE3B /* Main.storyboard */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +121,11 @@
 			dependencies = (
 			);
 			name = "agora-callkit-voip";
+			packageProductDependencies = (
+				9134E9572B2367170090BE3B /* AgoraAppGroupDataHelper */,
+				9134E9592B2367170090BE3B /* AgoraBroadcastExtensionHelper */,
+				9134E95B2B2367170090BE3B /* AgoraUIKit */,
+			);
 			productName = "agora-callkit-voip";
 			productReference = 9134E93B2B2363460090BE3B /* agora-callkit-voip.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +154,9 @@
 				Base,
 			);
 			mainGroup = 9134E9322B2363460090BE3B;
+			packageReferences = (
+				9134E9562B2367170090BE3B /* XCRemoteSwiftPackageReference "VideoUIKit-iOS" */,
+			);
 			productRefGroup = 9134E93C2B2363460090BE3B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +184,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9134E9432B2363460090BE3B /* ViewController.swift in Sources */,
+				9134E9432B2363460090BE3B /* MainViewController.swift in Sources */,
 				9134E93F2B2363460090BE3B /* AppDelegate.swift in Sources */,
 				9134E9412B2363460090BE3B /* SceneDelegate.swift in Sources */,
 			);
@@ -363,6 +409,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9134E9562B2367170090BE3B /* XCRemoteSwiftPackageReference "VideoUIKit-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AgoraIO-Community/VideoUIKit-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9134E9572B2367170090BE3B /* AgoraAppGroupDataHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9134E9562B2367170090BE3B /* XCRemoteSwiftPackageReference "VideoUIKit-iOS" */;
+			productName = AgoraAppGroupDataHelper;
+		};
+		9134E9592B2367170090BE3B /* AgoraBroadcastExtensionHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9134E9562B2367170090BE3B /* XCRemoteSwiftPackageReference "VideoUIKit-iOS" */;
+			productName = AgoraBroadcastExtensionHelper;
+		};
+		9134E95B2B2367170090BE3B /* AgoraUIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9134E9562B2367170090BE3B /* XCRemoteSwiftPackageReference "VideoUIKit-iOS" */;
+			productName = AgoraUIKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9134E9332B2363460090BE3B /* Project object */;
 }
